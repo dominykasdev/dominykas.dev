@@ -1,3 +1,5 @@
+import "./Page.scss";
+
 const Page = ({background, children}) => {
   const color = background !== undefined ? background : "#ccc";
   console.log(color);

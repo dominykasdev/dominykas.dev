@@ -1,4 +1,5 @@
 import Page from "./components/Page";
+import Stripe from "./components/Stripe";
 
 function App() {
   const intro = (
@@ -143,7 +144,7 @@ function App() {
       <Page>{about}</Page>
       <Page>{services}</Page>
       <Page>{portfolio}</Page>
-      <Page>{contact}</Page>
+      <Page>{contact}<Stripe/></Page>
     </div>
   );
 }
