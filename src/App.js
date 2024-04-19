@@ -42,22 +42,18 @@ function App() {
           animate={contactTransition ? "animate" : null}
           style={{
             backgroundColor: pennRed,
-            // bottom: "-4100px",
-            // left: "1000px",
           }}
         />
         <Stripe
+          animate={contactTransition ? "animate delay" : null}
           style={{
             backgroundColor: gamboge,
-            // bottom: "-4300px",
-            // left: "1000px",
           }}
         />
         <Stripe
+          animate={contactTransition ? "animate delay2" : null}
           style={{
             backgroundColor: moonstone,
-            // bottom: "-4500px",
-            // left: "1000px",
           }}
         />
       </Page>

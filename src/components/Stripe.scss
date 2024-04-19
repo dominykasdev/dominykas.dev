@@ -6,7 +6,7 @@
   width: 0px;
   height: 100vh;
   background: $kellyGreen;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   margin: 0 50%;
@@ -30,4 +30,12 @@
     width: 100vw;
     margin: 0;
   }
+}
+
+.delay {
+  animation-delay: 0.2s;
+}
+
+.delay2 {
+  animation-delay: 0.4s;
 }
