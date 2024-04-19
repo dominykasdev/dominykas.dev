@@ -1,9 +1,24 @@
-.stripe{
-    position: absolute;
-    rotate: 340deg;
-    width: 200vw;
-    height: 200vw;
-    background: antiquewhite;
-    top: 500px;
-    left: 1000px;
+@import "../Shared.scss";
+
+.stripe {
+  position: absolute;
+  rotate: 340deg;
+  width: 200vw;
+  height: 200vw;
+  background: $kellyGreen;
+  // top: 500px;
+  // left: 1000px;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+.stripe.animate {
+  animation-name: example;
+}
+
+@keyframes example {
+  100% {
+    left: -5000px;
+    top: -5000px;
   }
+}

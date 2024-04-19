@@ -1,9 +1,7 @@
-import "./Stripe.scss"
+import "./Stripe.scss";
 
-const Stripe = () => {
-    return(
-        <div className="stripe"></div>
-    )
-}
+const Stripe = (props) => {
+  return <div className="stripe" {...props}></div>;
+};
 
 export default Stripe;
