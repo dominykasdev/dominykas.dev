@@ -2,23 +2,32 @@
 
 .stripe {
   position: absolute;
-  rotate: 340deg;
-  width: 200vw;
-  height: 200vw;
+  top: -100vh;
+  width: 0px;
+  height: 100vh;
   background: $kellyGreen;
-  // top: 500px;
-  // left: 1000px;
   animation-timing-function: ease-in;
-  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  margin: 0 50%;
 }
 
 .stripe.animate {
-  animation-name: example;
+  animation-name: transition;
 }
 
-@keyframes example {
+@keyframes transition {
+  0% {
+    width: 1px;
+  }
+  40% {
+    width: 1px;
+    top: 0px;
+    margin: 0 50%;
+  }
   100% {
-    left: -5000px;
-    top: -5000px;
+    top: 0px;
+    width: 100vw;
+    margin: 0;
   }
 }
