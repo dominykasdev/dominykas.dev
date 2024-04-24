@@ -1,6 +1,6 @@
-import { BsHexagon, BsRecordCircleFill } from "react-icons/bs";
-import { pennRed, kellyGreen, gamboge, moonstone, seasalt } from "../Constants";
+import { pennRed, gamboge, moonstone } from "../Constants";
 import Stripe from "./Stripe";
+import CircleTransition from "./CircleTransition";
 
 const Transitions = ({
   homeActive,
@@ -10,16 +10,11 @@ const Transitions = ({
   contactActive,
 }) => {
   return (
-    <div style={{ position: "fixed", width: "100vw", height: "100vh" }}>
-      {/* <BsHexagon
-        size="large"
-        style={{ top: "300px", left: "300px", fill: "#333" }}
-      /> */}
-      <BsRecordCircleFill
-        size="large"
-        style={{ top: "300px", left: "300px", fill: "#333" }}
-      />
-      <Stripe
+    <>
+      {homeActive && <CircleTransition homeActive={homeActive} />}
+      {contactActive && (
+        <div style={{ position: "fixed", width: "100vw", height: "100vh" }}>
+          {/* <Stripe
         animate={portfolioActive ? "animate" : null}
         style={{
           backgroundColor: kellyGreen,
@@ -36,27 +31,29 @@ const Transitions = ({
         style={{
           backgroundColor: gamboge,
         }}
-      />
+      /> */}
 
-      <Stripe
-        animate={contactActive ? "animate" : null}
-        style={{
-          backgroundColor: pennRed,
-        }}
-      />
-      <Stripe
-        animate={contactActive ? "animate delay" : null}
-        style={{
-          backgroundColor: gamboge,
-        }}
-      />
-      <Stripe
-        animate={contactActive ? "animate delay2" : null}
-        style={{
-          backgroundColor: moonstone,
-        }}
-      />
-    </div>
+          <Stripe
+            animate={contactActive ? "animate" : null}
+            style={{
+              backgroundColor: pennRed,
+            }}
+          />
+          <Stripe
+            animate={contactActive ? "animate delay" : null}
+            style={{
+              backgroundColor: gamboge,
+            }}
+          />
+          <Stripe
+            animate={contactActive ? "animate delay2" : null}
+            style={{
+              backgroundColor: moonstone,
+            }}
+          />
+        </div>
+      )}
+    </>
   );
 };
 
