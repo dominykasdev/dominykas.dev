@@ -1,5 +1,6 @@
 .page {
   position: absolute;
+  display: none;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -8,5 +9,27 @@
 
 .page.active {
   opacity: 100;
+  display: flex;
   animation-delay: 0.9s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page .centeredContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.page .centeredContent p,
+.page .centeredContent h1,
+.page .centeredContent h2 {
+  text-align: center;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }

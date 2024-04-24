@@ -1,14 +1,14 @@
 export const home = (
-  <>
+  <div className="centeredContent">
     <h1>Dominykas.dev</h1>
     <p>Full Stack Engineer, lover of history, philosophy and politics.</p>
     <p>Interested in Judo, reading, and gaming.</p>
     <p>Amateur photographer.</p>
-  </>
+  </div>
 );
 
 export const services = (
-  <>
+  <div className="centeredContent">
     <h2>Services</h2>
     <h3>Website Development</h3>
     <p>
@@ -34,11 +34,11 @@ export const services = (
       give you a quote within 48 hours. You will be regularly updated throughout
       development and be involved in the project to give feedback.
     </p>
-  </>
+  </div>
 );
 
 export const about = (
-  <>
+  <div className="centeredContent">
     <h2>About Me</h2>
     <p>Hi, my name is Dominykas, I'm an experienced Full Stack Engineer.</p>
     <p>
@@ -58,11 +58,11 @@ export const about = (
       <li>Jira/Asana</li>
       <li>SQL/MongoDB</li>
     </ul>
-  </>
+  </div>
 );
 
 export const contact = (
-  <>
+  <div className="centeredContent">
     <a
       target="_blank"
       rel="noreferrer"
@@ -83,11 +83,11 @@ export const contact = (
     <a target="_blank" rel="noreferrer" href="https://codepen.io/domdev/">
       CODEPEN
     </a>
-  </>
+  </div>
 );
 
 export const portfolio = (
-  <>
+  <div className="centeredContent">
     <a target="_blank" rel="noreferrer" href="https://pablodifrancesco.com/">
       Pablo Di Francesco
     </a>
@@ -111,5 +111,5 @@ export const portfolio = (
     <a target="_blank" rel="noreferrer" href="https://codepen.io/domdev/">
       CodePen projects
     </a>
-  </>
+  </div>
 );
