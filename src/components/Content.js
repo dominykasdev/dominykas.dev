@@ -70,8 +70,37 @@ export const about = (
   </div>
 );
 
+export const portfolio = (
+  <div className="centeredContent">
+    <h2>Portfolio</h2>
+    <h3>Websites</h3>
+
+    <a target="_blank" rel="noreferrer" href="https://pablodifrancesco.com/">
+      Pablo Di Francesco
+    </a>
+    <a target="_blank" rel="noreferrer" href="https://psychicfuture.com">
+      Psychic Future
+    </a>
+    <a target="_blank" rel="noreferrer" href="https://thepcsurgeon.co.uk">
+      The PC Surgeon
+    </a>
+    <h3>Projects</h3>
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href="https://github.com/dominykasdev/cryptowebapp"
+    >
+      Crypto tracking app
+    </a>
+    <a target="_blank" rel="noreferrer" href="https://codepen.io/domdev/">
+      CodePen projects
+    </a>
+  </div>
+);
+
 export const contact = (
   <div className="centeredContent">
+    <h2>Contact</h2>
     <div>
       <a
         className="contactIcon"
@@ -112,33 +141,5 @@ export const contact = (
         <DiCodepen size={"8em"} />
       </a>
     </div>
-  </div>
-);
-
-export const portfolio = (
-  <div className="centeredContent">
-    <a target="_blank" rel="noreferrer" href="https://pablodifrancesco.com/">
-      Pablo Di Francesco
-    </a>
-    <a
-      target="_blank"
-      rel="noreferrer"
-      href="mailto:contact@dominykas.dev?subject=Dominykas.dev: Services Request"
-    >
-      Psychic Future
-    </a>
-    <a target="_blank" rel="noreferrer" href="https://thepcsurgeon.co.uk">
-      The PC Surgeon
-    </a>
-    <a
-      target="_blank"
-      rel="noreferrer"
-      href="https://www.linkedin.com/in/dominykas-genys-bb466795/"
-    >
-      Crypto tracking app
-    </a>
-    <a target="_blank" rel="noreferrer" href="https://codepen.io/domdev/">
-      CodePen projects
-    </a>
   </div>
 );

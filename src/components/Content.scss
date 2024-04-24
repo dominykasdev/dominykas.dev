@@ -13,3 +13,18 @@
 .contactIcon:active svg {
   fill: $seasalt;
 }
+
+#Portfolio a,
+#Services a {
+  transition-duration: 0.2s;
+  text-decoration: none;
+  font-weight: 600;
+  color: $pennRed;
+}
+
+#Portfolio a:hover,
+#Portfolio a:active,
+#Services a:hover,
+#Services a:active {
+  color: $seasalt;
+}
