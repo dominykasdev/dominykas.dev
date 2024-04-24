@@ -1,4 +1,4 @@
-export const intro = (
+export const home = (
   <>
     <h1>Dominykas.dev</h1>
     <p>Full Stack Engineer, lover of history, philosophy and politics.</p>

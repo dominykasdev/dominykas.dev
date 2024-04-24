@@ -3,7 +3,7 @@ import Page from "./components/Page";
 import Stripe from "./components/Stripe";
 import { pennRed, kellyGreen, gamboge, moonstone, seasalt } from "./Constants";
 import {
-  intro,
+  home,
   about,
   services,
   portfolio,
@@ -12,55 +12,55 @@ import {
 import { useState } from "react";
 
 function App() {
-  const [homeTransition, setHomeTransition] = useState(true);
-  const [aboutTransition, setAboutTransition] = useState(false);
-  const [servicesTransition, setServicesTransition] = useState(false);
-  const [portfolioTransition, setPortfolioTransition] = useState(false);
-  const [contactTransition, setContactTransition] = useState(false);
+  const [homeActive, setHomeActive] = useState(true);
+  const [aboutActive, setAboutActive] = useState(false);
+  const [servicesActive, setServicesActive] = useState(false);
+  const [portfolioActive, setPortfolioActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
 
   const homeFunc = () => {
     console.log("home clicked!");
-    setHomeTransition(true);
-    setAboutTransition(false);
-    setServicesTransition(false);
-    setPortfolioTransition(false);
-    setContactTransition(false);
+    setHomeActive(true);
+    setAboutActive(false);
+    setServicesActive(false);
+    setPortfolioActive(false);
+    setContactActive(false);
   };
 
   const aboutFunc = () => {
     console.log("about clicked!");
-    setHomeTransition(false);
-    setAboutTransition(true);
-    setServicesTransition(false);
-    setPortfolioTransition(false);
-    setContactTransition(false);
+    setHomeActive(false);
+    setAboutActive(true);
+    setServicesActive(false);
+    setPortfolioActive(false);
+    setContactActive(false);
   };
 
   const servicesFunc = () => {
     console.log("services clicked!");
-    setHomeTransition(false);
-    setAboutTransition(false);
-    setServicesTransition(true);
-    setPortfolioTransition(false);
-    setContactTransition(false);
+    setHomeActive(false);
+    setAboutActive(false);
+    setServicesActive(true);
+    setPortfolioActive(false);
+    setContactActive(false);
   };
 
   const portfolioFunc = () => {
     console.log("portfolio clicked!");
-    setHomeTransition(false);
-    setAboutTransition(false);
-    setServicesTransition(false);
-    setPortfolioTransition(true);
-    setContactTransition(false);
+    setHomeActive(false);
+    setAboutActive(false);
+    setServicesActive(false);
+    setPortfolioActive(true);
+    setContactActive(false);
   };
 
   const contactFunc = () => {
     console.log("contact clicked!");
-    setHomeTransition(false);
-    setAboutTransition(false);
-    setServicesTransition(false);
-    setPortfolioTransition(false);
-    setContactTransition(true);
+    setHomeActive(false);
+    setAboutActive(false);
+    setServicesActive(false);
+    setPortfolioActive(false);
+    setContactActive(true);
   };
 
   return (
@@ -74,29 +74,29 @@ function App() {
       />
       <div style={{ position: "fixed", width: "100vw", height: "100vh" }}>
         <Stripe
-          animate={contactTransition ? "animate" : null}
+          animate={contactActive ? "animate" : null}
           style={{
             backgroundColor: pennRed,
           }}
         />
         <Stripe
-          animate={contactTransition ? "animate delay" : null}
+          animate={contactActive ? "animate delay" : null}
           style={{
             backgroundColor: gamboge,
           }}
         />
         <Stripe
-          animate={contactTransition ? "animate delay2" : null}
+          animate={contactActive ? "animate delay2" : null}
           style={{
             backgroundColor: moonstone,
           }}
         />
       </div>
-      <Page>{intro}</Page>
-      <Page>{about}</Page>
-      <Page>{services}</Page>
-      <Page>{portfolio}</Page>
-      <Page>{contact}</Page>
+      <Page active={homeActive}>{home}</Page>
+      <Page active={aboutActive}>{about}</Page>
+      <Page active={servicesActive}>{services}</Page>
+      <Page active={portfolioActive}>{portfolio}</Page>
+      <Page active={contactActive}>{contact}</Page>
     </div>
   );
 }
