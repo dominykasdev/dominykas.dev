@@ -28,3 +28,9 @@
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+@media only screen and (max-width: 488px) {
+  .navigation {
+    display: none;
+  }
+}

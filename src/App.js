@@ -10,6 +10,7 @@ import {
   contact,
 } from "./components/Content";
 import { useState } from "react";
+import NavigationMobile from "./components/NavigationMobile";
 
 function App() {
   const [homeActive, setHomeActive] = useState(true);
@@ -66,6 +67,13 @@ function App() {
   return (
     <div className="App">
       <Navigation
+        homeFunc={homeFunc}
+        aboutFunc={aboutFunc}
+        serviceFunc={servicesFunc}
+        portfolioFunc={portfolioFunc}
+        contactFunc={contactFunc}
+      />
+      <NavigationMobile
         homeFunc={homeFunc}
         aboutFunc={aboutFunc}
         serviceFunc={servicesFunc}
