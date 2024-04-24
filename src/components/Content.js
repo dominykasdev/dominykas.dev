@@ -1,3 +1,9 @@
+// import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
+import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
+import { DiCodepen, DiGithub } from "react-icons/di";
+import { MdEmail } from "react-icons/md";
+import "./Content.scss";
+
 export const home = (
   <div className="centeredContent">
     <h1>Dominykas.dev</h1>
@@ -63,26 +69,46 @@ export const about = (
 
 export const contact = (
   <div className="centeredContent">
-    <a
-      target="_blank"
-      rel="noreferrer"
-      href="mailto:contact@dominykas.dev?subject=Dominykas.dev: Services Request"
-    >
-      EMAIL
-    </a>
-    <a target="_blank" rel="noreferrer" href="https://github.com/dominykasdev">
-      GITHUB
-    </a>
-    <a
-      target="_blank"
-      rel="noreferrer"
-      href="https://www.linkedin.com/in/dominykas-genys-bb466795/"
-    >
-      LINKDIN
-    </a>
-    <a target="_blank" rel="noreferrer" href="https://codepen.io/domdev/">
-      CODEPEN
-    </a>
+    <div>
+      <a
+        className="contactIcon"
+        target="_blank"
+        rel="noreferrer"
+        href="mailto:contact@dominykas.dev?subject=Dominykas.dev: Services Request"
+        title="Email contact@dominykas.dev"
+      >
+        <MdEmail size={"8em"} color="" />
+      </a>
+      <a
+        className="contactIcon"
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/dominykasdev"
+        title="Dominykasdev - GitHub"
+      >
+        <BsGithub size={"8em"} />
+      </a>
+    </div>
+    <div>
+      <a
+        className="contactIcon"
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.linkedin.com/in/dominykas-genys-bb466795/"
+        title="Dominykas Genys - LinkedIn"
+      >
+        <BsLinkedin size={"8em"} />
+      </a>
+      <a
+        className="contactIcon"
+        target="_blank"
+        rel="noreferrer"
+        href="https://codepen.io/domdev/"
+        title="DomDev - CodePen"
+      >
+        <DiCodepen size={"8em"} />
+      </a>
+    </div>
   </div>
 );
 

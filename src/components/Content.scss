@@ -1,0 +1,15 @@
+@import "../Shared.scss";
+
+.contactIcon {
+  margin: 10px;
+}
+
+.contactIcon svg {
+  fill: #333;
+  transition-duration: 0.7s;
+}
+
+.contactIcon:hover svg,
+.contactIcon:active svg {
+  fill: $seasalt;
+}
