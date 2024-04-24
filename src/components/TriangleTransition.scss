@@ -1,4 +1,4 @@
-.circle {
+.triangle {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -7,17 +7,18 @@
   height: 0px;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-duration: 0.7s;
+  animation-duration: 1.2s;
 }
 
-.circle.animate {
-  animation-name: circleTransition;
+.triangle.animate {
+  animation-name: triangleTransition;
 }
 
-@keyframes circleTransition {
+@keyframes triangleTransition {
   0% {
     width: 0px;
     height: 0px;
+    rotate: 0deg;
   }
   //   40% {
   //     width: 1px;
@@ -25,24 +26,25 @@
   //     margin: 0 50%;
   //   }
   100% {
+    rotate: 270deg;
     width: 700vw;
     height: 700vh;
   }
 }
 
-.circle.delay {
+.triangle.delay {
   animation-delay: 0.1s;
 }
 
-.circle.delay2 {
+.triangle.delay2 {
   animation-delay: 0.25s;
 }
 
-.circle.delay3 {
+.triangle.delay3 {
   animation-delay: 0.35s;
 }
 
-.circle.delay4 {
+.triangle.delay4 {
   animation-delay: 0.45s;
 }
 

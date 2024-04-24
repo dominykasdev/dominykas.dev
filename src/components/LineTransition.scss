@@ -1,0 +1,95 @@
+@import "../Shared.scss";
+
+.line {
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  background-color: $kellyGreen;
+}
+
+.line.animate {
+  animation-name: lineTransition;
+}
+
+@keyframes lineTransitionLeft {
+  0% {
+    width: 1px;
+  }
+  40% {
+    width: 1px;
+    top: 0px;
+    margin: 0 50%;
+  }
+  100% {
+    top: 0px;
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+@keyframes lineTransitionRight {
+  0% {
+    width: 1px;
+  }
+  40% {
+    width: 1px;
+    top: 0px;
+    margin: 0 50%;
+  }
+  100% {
+    top: 0px;
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.line1 {
+  left: -100vw;
+  top: 0;
+}
+
+.line2 {
+  right: -100vw;
+  top: 10vh;
+}
+
+.line3 {
+  left: -100vw;
+  top: 20vh;
+}
+
+.line4 {
+  right: -100vw;
+  top: 30vh;
+}
+
+.line5 {
+  left: -100vw;
+  height: 11vh;
+  top: 40vh;
+}
+
+.line6 {
+  right: -100vw;
+  top: 50vh;
+}
+
+.line7 {
+  left: -100vw;
+  top: 60vh;
+}
+
+.line8 {
+  right: -100vw;
+  top: 70vh;
+}
+
+.line9 {
+  left: -100vw;
+  top: 80vh;
+}
+
+.line10 {
+  right: -100vw;
+  top: 90vh;
+}

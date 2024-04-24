@@ -13,10 +13,10 @@
 }
 
 .stripe.animate {
-  animation-name: transition;
+  animation-name: stripeTransition;
 }
 
-@keyframes transition {
+@keyframes stripeTransition {
   0% {
     width: 1px;
   }
@@ -32,10 +32,10 @@
   }
 }
 
-.delay {
+.stripe.delay {
   animation-delay: 0.2s;
 }
 
-.delay2 {
+.stripe.delay2 {
   animation-delay: 0.4s;
 }
