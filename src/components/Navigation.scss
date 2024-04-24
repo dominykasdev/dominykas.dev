@@ -1,12 +1,16 @@
 .navigation {
   position: fixed;
   z-index: 100;
+  margin: 5px;
+  max-width: 100%;
 }
 
 .navigation .MuiButton-root {
   border-color: #eee;
   color: #eee;
   background-color: #333;
+  border-radius: 0;
+  border-width: 1px;
 }
 
 .navigation .MuiButton-root:hover,
@@ -14,4 +18,13 @@
   border-color: #333;
   color: #333;
   background-color: #eee;
+}
+
+.navigation .MuiButton-root:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.navigation .MuiButton-root:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
