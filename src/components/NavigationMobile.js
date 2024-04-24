@@ -11,13 +11,13 @@ import {
   IconButton,
 } from "@mui/material";
 
-const NavigationMobile = (
+const NavigationMobile = ({
   homeFunc,
   aboutFunc,
   serviceFunc,
   portfolioFunc,
-  contactFunc
-) => {
+  contactFunc,
+}) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -88,11 +88,46 @@ const NavigationMobile = (
                   aria-labelledby="composition-button"
                   onKeyDown={handleListKeyDown}
                 >
-                  <MenuItem onClick={homeFunc}>Home</MenuItem>
-                  <MenuItem onClick={aboutFunc}>About</MenuItem>
-                  <MenuItem onClick={serviceFunc}>Services</MenuItem>
-                  <MenuItem onClick={portfolioFunc}>Portfolio</MenuItem>
-                  <MenuItem onClick={contactFunc}>Contact</MenuItem>
+                  <MenuItem
+                    onClick={(event) => {
+                      homeFunc();
+                      handleClose(event);
+                    }}
+                  >
+                    Home
+                  </MenuItem>
+                  <MenuItem
+                    onClick={(event) => {
+                      aboutFunc();
+                      handleClose(event);
+                    }}
+                  >
+                    About
+                  </MenuItem>
+                  <MenuItem
+                    onClick={(event) => {
+                      serviceFunc();
+                      handleClose(event);
+                    }}
+                  >
+                    Services
+                  </MenuItem>
+                  <MenuItem
+                    onClick={(event) => {
+                      portfolioFunc();
+                      handleClose(event);
+                    }}
+                  >
+                    Portfolio
+                  </MenuItem>
+                  <MenuItem
+                    onClick={(event) => {
+                      contactFunc();
+                      handleClose(event);
+                    }}
+                  >
+                    Contact
+                  </MenuItem>
                 </MenuList>
               </ClickAwayListener>
             </Paper>
