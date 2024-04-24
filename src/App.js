@@ -12,17 +12,51 @@ import {
 import { useState } from "react";
 
 function App() {
-  const [introTransition, setIntroTransition] = useState(true);
+  const [homeTransition, setHomeTransition] = useState(true);
   const [aboutTransition, setAboutTransition] = useState(false);
   const [servicesTransition, setServicesTransition] = useState(false);
   const [portfolioTransition, setPortfolioTransition] = useState(false);
   const [contactTransition, setContactTransition] = useState(false);
 
-  const aboutFunc = () => {};
+  const homeFunc = () => {
+    console.log("home clicked!");
+    setHomeTransition(true);
+    setAboutTransition(false);
+    setServicesTransition(false);
+    setPortfolioTransition(false);
+    setContactTransition(false);
+  };
+
+  const aboutFunc = () => {
+    console.log("about clicked!");
+    setHomeTransition(false);
+    setAboutTransition(true);
+    setServicesTransition(false);
+    setPortfolioTransition(false);
+    setContactTransition(false);
+  };
+
+  const servicesFunc = () => {
+    console.log("services clicked!");
+    setHomeTransition(false);
+    setAboutTransition(false);
+    setServicesTransition(true);
+    setPortfolioTransition(false);
+    setContactTransition(false);
+  };
+
+  const portfolioFunc = () => {
+    console.log("portfolio clicked!");
+    setHomeTransition(false);
+    setAboutTransition(false);
+    setServicesTransition(false);
+    setPortfolioTransition(true);
+    setContactTransition(false);
+  };
 
   const contactFunc = () => {
     console.log("contact clicked!");
-    setIntroTransition(false);
+    setHomeTransition(false);
     setAboutTransition(false);
     setServicesTransition(false);
     setPortfolioTransition(false);
@@ -31,13 +65,14 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation aboutFunc={aboutFunc} contactFunc={contactFunc} />
-      <Page>{intro}</Page>
-      <Page>{about}</Page>
-      <Page>{services}</Page>
-      <Page>{portfolio}</Page>
-      <Page>
-        {contact}
+      <Navigation
+        homeFunc={homeFunc}
+        aboutFunc={aboutFunc}
+        serviceFunc={servicesFunc}
+        portfolioFunc={portfolioFunc}
+        contactFunc={contactFunc}
+      />
+      <div style={{ position: "fixed", width: "100vw", height: "100vh" }}>
         <Stripe
           animate={contactTransition ? "animate" : null}
           style={{
@@ -56,7 +91,12 @@ function App() {
             backgroundColor: moonstone,
           }}
         />
-      </Page>
+      </div>
+      <Page>{intro}</Page>
+      <Page>{about}</Page>
+      <Page>{services}</Page>
+      <Page>{portfolio}</Page>
+      <Page>{contact}</Page>
     </div>
   );
 }
