@@ -1,7 +1,6 @@
 import Navigation from "./components/Navigation";
 import Page from "./components/Page";
-import Stripe from "./components/Stripe";
-import { pennRed, kellyGreen, gamboge, moonstone, seasalt } from "./Constants";
+import Transitions from "./components/Transitions";
 import {
   home,
   about,
@@ -80,26 +79,13 @@ function App() {
         portfolioFunc={portfolioFunc}
         contactFunc={contactFunc}
       />
-      <div style={{ position: "fixed", width: "100vw", height: "100vh" }}>
-        <Stripe
-          animate={contactActive ? "animate" : null}
-          style={{
-            backgroundColor: pennRed,
-          }}
-        />
-        <Stripe
-          animate={contactActive ? "animate delay" : null}
-          style={{
-            backgroundColor: gamboge,
-          }}
-        />
-        <Stripe
-          animate={contactActive ? "animate delay2" : null}
-          style={{
-            backgroundColor: moonstone,
-          }}
-        />
-      </div>
+      <Transitions
+        homeActive={homeActive}
+        aboutActive={aboutActive}
+        servicesActive={servicesActive}
+        portfolioActive={portfolioActive}
+        contactActive={contactActive}
+      />
       <Page id="Home" active={homeActive}>
         {home}
       </Page>
