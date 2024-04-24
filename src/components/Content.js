@@ -1,6 +1,5 @@
-// import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
-import { BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
-import { DiCodepen, DiGithub } from "react-icons/di";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { DiCodepen } from "react-icons/di";
 import { MdEmail } from "react-icons/md";
 import "./Content.scss";
 
@@ -33,7 +32,11 @@ export const services = (
     <p>
       I aim to respond to requests as soon as possible! If you are looking for a
       quote do not hesitate to{" "}
-      <a href="mailto:contact@dominykas.dev?subject=Dominykas.dev: Services Request">
+      <a
+        target="_blank"
+        href="mailto:contact@dominykas.dev?subject=Dominykas.dev: Services Request"
+        rel="noreferrer"
+      >
         contact me
       </a>
       . After a short discussion about your requirements and timelines I can

@@ -100,11 +100,21 @@ function App() {
           }}
         />
       </div>
-      <Page active={homeActive}>{home}</Page>
-      <Page active={aboutActive}>{about}</Page>
-      <Page active={servicesActive}>{services}</Page>
-      <Page active={portfolioActive}>{portfolio}</Page>
-      <Page active={contactActive}>{contact}</Page>
+      <Page id="Home" active={homeActive}>
+        {home}
+      </Page>
+      <Page id="About" active={aboutActive}>
+        {about}
+      </Page>
+      <Page id="Services" active={servicesActive}>
+        {services}
+      </Page>
+      <Page id="Portfolio" active={portfolioActive}>
+        {portfolio}
+      </Page>
+      <Page id="Contact" active={contactActive}>
+        {contact}
+      </Page>
     </div>
   );
 }
