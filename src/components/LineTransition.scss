@@ -104,3 +104,25 @@
 .line.delay4 {
   animation-delay: 0.8s;
 }
+
+@media only screen and (max-width: 488px) {
+  .line {
+    animation-duration: 0.5s;
+  }
+
+  .line.delay {
+    animation-delay: 0.1s;
+  }
+
+  .line.delay2 {
+    animation-delay: 0.2s;
+  }
+
+  .line.delay3 {
+    animation-delay: 0.3s;
+  }
+
+  .line.delay4 {
+    animation-delay: 0.4s;
+  }
+}
