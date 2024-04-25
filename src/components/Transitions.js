@@ -1,5 +1,3 @@
-import { pennRed, gamboge, moonstone } from "../Constants";
-import Stripe from "./Stripe";
 import CircleTransition from "./CircleTransition";
 import TriangleTransition from "./TriangleTransition";
 import LineTransition from "./LineTransition";
@@ -17,6 +15,7 @@ const Transitions = ({
       {homeActive && <CircleTransition homeActive={homeActive} />}
       {aboutActive && <TriangleTransition aboutActive={aboutActive} />}
       {servicesActive && <LineTransition servicesActive={servicesActive} />}
+      {portfolioActive && <LineTransition portfolioActive={portfolioActive} />}
       {contactActive && <StripeTransition contactActive={contactActive} />}
     </>
   );
