@@ -4,42 +4,37 @@
   position: absolute;
   height: 10vh;
   width: 100vw;
-  background-color: $kellyGreen;
+  background-color: $seasalt;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
 }
 
-.line.animate {
-  animation-name: lineTransition;
+.line.animate.left {
+  animation-name: lineTransitionLeft;
+}
+
+.line.animate.right {
+  animation-name: lineTransitionRight;
 }
 
 @keyframes lineTransitionLeft {
   0% {
-    width: 1px;
-  }
-  40% {
-    width: 1px;
-    top: 0px;
-    margin: 0 50%;
+    left: -100vw;
   }
   100% {
-    top: 0px;
-    width: 100vw;
-    margin: 0;
+    left: 0vw;
+    background-color: $kellyGreen;
   }
 }
 
 @keyframes lineTransitionRight {
   0% {
-    width: 1px;
-  }
-  40% {
-    width: 1px;
-    top: 0px;
-    margin: 0 50%;
+    right: -100vw;
   }
   100% {
-    top: 0px;
-    width: 100vw;
-    margin: 0;
+    right: 0vw;
+    background-color: $kellyGreen;
   }
 }
 
@@ -92,4 +87,20 @@
 .line10 {
   right: -100vw;
   top: 90vh;
+}
+
+.line.delay {
+  animation-delay: 0.2s;
+}
+
+.line.delay2 {
+  animation-delay: 0.4s;
+}
+
+.line.delay3 {
+  animation-delay: 0.6s;
+}
+
+.line.delay4 {
+  animation-delay: 0.8s;
 }
