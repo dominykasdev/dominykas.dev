@@ -5,10 +5,8 @@ import "./TriangleTransition.scss";
 const TriangleTransition = ({ aboutActive }) => {
   return (
     <div
+      className="animationContainer"
       style={{
-        position: "fixed",
-        width: "100vw",
-        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

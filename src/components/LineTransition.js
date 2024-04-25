@@ -3,13 +3,7 @@ import "./LineTransition.scss";
 
 const LineTransition = ({ servicesActive }) => {
   return (
-    <div
-      style={{
-        position: "fixed",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
+    <div className="animationContainer">
       <div
         className={
           servicesActive ? "line line1 left animate" : "line line1 left"

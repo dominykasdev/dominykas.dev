@@ -2,6 +2,7 @@ import CircleTransition from "./CircleTransition";
 import TriangleTransition from "./TriangleTransition";
 import LineTransition from "./LineTransition";
 import StripeTransition from "./StripeTransition";
+import "../Shared.scss";
 
 const Transitions = ({
   homeActive,
@@ -15,7 +16,7 @@ const Transitions = ({
       {homeActive && <CircleTransition homeActive={homeActive} />}
       {aboutActive && <TriangleTransition aboutActive={aboutActive} />}
       {servicesActive && <LineTransition servicesActive={servicesActive} />}
-      {portfolioActive && <LineTransition portfolioActive={portfolioActive} />}
+      {/* {portfolioActive && <LineTransition portfolioActive={portfolioActive} />} */}
       {contactActive && <StripeTransition contactActive={contactActive} />}
     </>
   );

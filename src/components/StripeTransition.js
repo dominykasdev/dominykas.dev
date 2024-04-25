@@ -4,7 +4,7 @@ import "./StripeTransition.scss";
 
 const StripeTransition = ({ contactActive }) => {
   return (
-    <div style={{ position: "fixed", width: "100vw", height: "100vh" }}>
+    <div className="animationContainer">
       <Stripe
         animate={contactActive ? "animate" : null}
         style={{
